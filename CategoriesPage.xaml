@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+x:Class="QuizMauiApp.CategoriesPage"
+Title="Catégories">
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+            <Label Text="Choisissez une catégorie"
+FontSize="28"
+FontAttributes="Bold"
+HorizontalTextAlignment="Center"
+TextColor="DarkBlue" />
+            <Button Text="Culture générale"
+                    Clicked="OnCategoryClicked"
+FontSize="18"
+HeightRequest="55"
+CornerRadius="12"
+BackgroundColor="#E3F2FD"
+TextColor="Black" />
+            <Button Text="Informatique"
+                    Clicked="OnCategoryClicked"
+FontSize="18"
+HeightRequest="55"
+CornerRadius="12"
+BackgroundColor="#E8F5E9"
+TextColor="Black" />
+            <Button Text="Mathématiques"
+                    Clicked="OnCategoryClicked"
+FontSize="18"
+HeightRequest="55"
+CornerRadius="12"
+BackgroundColor="#FFF3E0"
+TextColor="Black" />
+            <Button Text="Langues"
+                    Clicked="OnCategoryClicked"
+FontSize="18"
+HeightRequest="55"
+CornerRadius="12"
+BackgroundColor="#F3E5F5"
+TextColor="Black"/>
+        </VerticalStackLayout>
+    </ScrollView>
+  </ContentPage>
