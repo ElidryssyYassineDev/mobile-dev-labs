@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.movementdetection">
+
+    <!--
+        ACTIVITY_RECOGNITION is required on Android 10+ (API 29+)
+        to access TYPE_STEP_COUNTER and TYPE_STEP_DETECTOR.
+        It must ALSO be requested at runtime — see StepActivity.java.
+        No permission is needed for accelerometer or proximity.
+    -->
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+
+    <!--
+        Declare hardware features we use.
+        android:required="false" means the app can still be installed on
+        devices that lack the sensor — we handle the null case in code.
+    -->
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.sensor.proximity"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.sensor.stepcounter"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Sensor Project"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- Launcher: HomeActivity -->
+        <activity
+            android:name=".HomeActivity"
+            android:label="Sensor Project"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Accelerometer -->
+        <activity
+            android:name=".MainActivity"
+            android:label="Accelerometer"
+            android:exported="false" />
+
+        <!-- Proximity -->
+        <activity
+            android:name=".ProximityActivity"
+            android:label="Proximity Sensor"
+            android:exported="false" />
+
+        <!-- Pedometer -->
+        <activity
+            android:name=".StepActivity"
+            android:label="Pedometer"
+            android:exported="false" />
+
+    </application>
+</manifest>
