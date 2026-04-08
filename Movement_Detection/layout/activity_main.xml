@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accelerometer"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#3C3489"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TYPE_ACCELEROMETER — measures acceleration in m/s² on 3 axes"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- X axis -->
+        <TextView
+            android:id="@+id/tv_x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:textSize="15sp"
+            android:fontFamily="monospace"
+            android:textColor="#1A1A2E"
+            android:text="X (lateral):   — m/s²"
+            android:layout_marginBottom="8dp"
+            android:elevation="1dp"/>
+
+        <!-- Y axis -->
+        <TextView
+            android:id="@+id/tv_y"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:textSize="15sp"
+            android:fontFamily="monospace"
+            android:textColor="#1A1A2E"
+            android:text="Y (vertical):  — m/s²"
+            android:layout_marginBottom="8dp"
+            android:elevation="1dp"/>
+
+        <!-- Z axis -->
+        <TextView
+            android:id="@+id/tv_z"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:textSize="15sp"
+            android:fontFamily="monospace"
+            android:textColor="#1A1A2E"
+            android:text="Z (depth):     — m/s²"
+            android:layout_marginBottom="16dp"
+            android:elevation="1dp"/>
+
+        <!-- Magnitude -->
+        <TextView
+            android:id="@+id/tv_magnitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEEDFE"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="#3C3489"
+            android:text="Magnitude: — m/s²"
+            android:layout_marginBottom="8dp"
+            android:elevation="1dp"/>
+
+        <!-- Orientation -->
+        <TextView
+            android:id="@+id/tv_orientation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEEDFE"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:textColor="#3C3489"
+            android:text="Orientation: —"
+            android:layout_marginBottom="8dp"
+            android:elevation="1dp"/>
+
+        <!-- Accuracy -->
+        <TextView
+            android:id="@+id/tv_accuracy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:text="Accuracy: —"
+            android:elevation="1dp"/>
+
+    </LinearLayout>
+</ScrollView>

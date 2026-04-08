@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sensor Project"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A2E"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a sensor to explore"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="48dp"/>
+
+    <!-- Accelerometer button -->
+    <Button
+        android:id="@+id/btn_accelerometer"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Accelerometer"
+        android:textSize="16sp"
+        android:backgroundTint="#7F77DD"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Proximity button -->
+    <Button
+        android:id="@+id/btn_proximity"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Proximity Sensor"
+        android:textSize="16sp"
+        android:backgroundTint="#1D9E75"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Pedometer button -->
+    <Button
+        android:id="@+id/btn_pedometer"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Pedometer (Step Counter)"
+        android:textSize="16sp"
+        android:backgroundTint="#D85A30"/>
+
+</LinearLayout>
