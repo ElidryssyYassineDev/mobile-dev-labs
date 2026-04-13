@@ -1,12 +1,17 @@
-﻿namespace QuizMauiApp
+﻿
+namespace QuizMauiApp;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-            Routing.RegisterRoute(nameof(CategoriesPage), typeof(CategoriesPage));
-            Routing.RegisterRoute(nameof(QuizPage), typeof(QuizPage));
-        }
+        InitializeComponent();
+
+        // ── Register all navigable pages ──────────────────
+        Routing.RegisterRoute(nameof(CategoriesPage), typeof(CategoriesPage));
+        Routing.RegisterRoute(nameof(QuizPage), typeof(QuizPage));
+        Routing.RegisterRoute(nameof(ResultPage), typeof(ResultPage));
     }
+
+   
 }

@@ -1,17 +1,55 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="QuizMauiApp.QuizPage"
-Title="Quiz">
-    <VerticalStackLayout Padding="30" Spacing="20">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizMauiApp.QuizPage"
+             Title="Quiz">
+
+    <VerticalStackLayout Padding="20" Spacing="16">
+
+        <!-- Question counter label -->
+        <Label x:Name="QuestionCounterLabel"
+               Text="Question 1"
+               FontSize="14"
+               TextColor="Gray"
+               HorizontalTextAlignment="Center" />
+
+        <!-- The question text -->
         <Label x:Name="QuestionLabel"
-Text="Question ici"
-FontSize="24"
-FontAttributes="Bold"
-HorizontalTextAlignment="Center" />
-        <Button Text="Réponse 1" Clicked="OnAnswerClicked"/>
-        <Button Text="Réponse 2" Clicked="OnAnswerClicked"/>
-        <Button Text="Réponse 3" Clicked="OnAnswerClicked"/>
-        <Button Text="Réponse 4" Clicked="OnAnswerClicked"/>
+               Text="..."
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               Margin="0,10" />
+
+        <!-- 4 Answer Buttons — names are CRITICAL -->
+        <Button x:Name="AnswerButton1"
+                Text="Réponse 1"
+                BackgroundColor="Gray"
+                TextColor="White"
+                CornerRadius="12"
+                Clicked="OnAnswerClicked" />
+
+        <Button x:Name="AnswerButton2"
+                Text="Réponse 2"
+                BackgroundColor="Gray"
+                TextColor="White"
+                CornerRadius="12"
+                Clicked="OnAnswerClicked" />
+
+        <Button x:Name="AnswerButton3"
+                Text="Réponse 3"
+                BackgroundColor="Gray"
+                TextColor="White"
+                CornerRadius="12"
+                Clicked="OnAnswerClicked" />
+
+        <Button x:Name="AnswerButton4"
+                Text="Réponse 4"
+                BackgroundColor="Gray"
+                TextColor="White"
+                CornerRadius="12"
+                Clicked="OnAnswerClicked" />
+
     </VerticalStackLayout>
+
 </ContentPage>
