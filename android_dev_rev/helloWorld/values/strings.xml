@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">revision_demo</string>
+
+    <string name="messageAAficher">BONJOUR TOUT LE MONDE!</string>
+</resources>
