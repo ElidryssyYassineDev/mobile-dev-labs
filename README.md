@@ -1,42 +1,40 @@
 # 📱 Mobile Development Labs — ENSA Fes
 
-An overview of all mobile development labs completed as part of the Computer Science Engineering curriculum at **ENSA Fes**.  
-This repository covers two major tracks: cross-platform development with **.NET MAUI** and native Android development with **Java & Android Studio**.
+A comprehensive collection of mobile development projects covering both **cross-platform development with .NET MAUI** and **native Android development with Java**. These projects were completed as part of the Computer Science Engineering curriculum at **ENSA Fes**.
 
 ---
 
-## 🗂️ Lab Tracks
+## 🗂️ Projects Overview
 
-### 🔷 Track 1 — Cross-Platform Development with .NET MAUI
+### 🔷 .NET MAUI Projects
 
-Labs focused on building cross-platform mobile applications using .NET MAUI and C#.
+Cross-platform mobile applications built with .NET MAUI and C#.
 
-| Lab | Description |
-|-----|-------------|
-| Lab 1 | Introduction to .NET MAUI — project structure, XAML basics |
-| Lab 2 | Layouts and UI components (StackLayout, Grid, CollectionView) |
-| Lab 3 | Navigation with AppShell (multi-page apps) |
-| Lab 4 | Quiz App — categories, interactive quiz interface, page management |
+| Project | Description | Location |
+|---------|-------------|----------|
+| **Quiz App** | Multi-page quiz application with category selection, interactive questions, and result tracking | Root directory |
+| **Phoneword** | Phone number to word translator app demonstrating MAUI fundamentals | `phoneword/` |
 
 **Tech Stack:**
-- .NET MAUI
-- C# & XAML
-- Visual Studio 2022+
-- Windows / Android / iOS targets
+- .NET MAUI / C#
+- XAML (Extensible Application Markup Language)
+- Visual Studio 2022
+- Multi-platform targets (Windows, Android, iOS)
 
 ---
 
-### 🔶 Track 2 — Native Android Development with Java & Android Studio
+### 🔶 Android Projects (Java)
 
-Labs focused on building native Android applications using Java and Android Studio.
+Native Android applications built with Java and Android Studio.
 
-| Lab | Description |
-|-----|-------------|
-| Lab 1 | Movement Detection with android studio (java) |
-| Lab 2 | Coming soon |
-| Lab 3 | Coming soon |
-| Lab 4 | Coming soon |
-| Lab 5 | Coming soon |
+| Project | Description | Location |
+|---------|-------------|----------|
+| **Calculator** | Basic calculator application | `android_dev_rev/Calculator/` |
+| **Hello World** | Introductory Android application | `android_dev_rev/helloWorld/` |
+| **Intents Tutorial** | Multi-activity app demonstrating Android Intents | `android_dev_rev/IntentsTuto/` |
+| **Quadratic Equation Solver** | Solves quadratic equations with UI for coefficient input | `android_dev_rev/QuadraticEquationSolver/` |
+| **SQLite Tutorial** | Database operations demo using SQLite | `android_dev_rev/SQLiteTuto/` |
+| **Movement Detection** | Advanced app featuring step detection, proximity sensing, and home/activity tracking | `Movement_Detection/` |
 
 **Tech Stack:**
 - Java
@@ -51,88 +49,143 @@ Labs focused on building native Android applications using Java and Android Stud
 ```
 mobile-dev-labs/
 │
-├── MAUI/                        # .NET MAUI labs
-│   ├── Lab1-Introduction/
-│   ├── Lab2-Layouts/
-│   ├── Lab3-Navigation/
-│   └── Lab4-QuizApp/
-│       ├── Platforms/
-│       ├── Resources/
-│       ├── App.xaml
-│       ├── AppShell.xaml
-│       ├── MainPage.xaml
-│       ├── CategoriesPage.xaml
-│       ├── QuizPage.xaml
-│       ├── MauiProgram.cs
-│       └── QuizMauiApp.csproj
+├── QuizMauiApp.csproj           # Quiz App (MAUI)
+├── App.xaml / App.xaml.cs
+├── AppShell.xaml / AppShell.xaml.cs
+├── MainPage.xaml / MainPage.xaml.cs
+├── CategoriesPage.xaml / CategoriesPage.xaml.cs
+├── QuizPage.xaml / QuizPage.xaml.cs
+├── ResultPage.xaml / ResultPage.xaml.cs
+├── QuizQuestion.cs              # Quiz data model
+├── MauiProgram.cs
 │
-└── Android/                     # Android Studio (Java) labs
-    ├── Lab1-Introduction/
-    ├── Lab2-Layouts/
-    ├── Lab3-Intents/
-    ├── Lab4-UserInput/
-    └── Lab5-RecyclerView/
+├── phoneword/                   # Phoneword MAUI App
+│   ├── App.xaml
+│   ├── AppShell.xaml
+│   ├── MainPage.xaml
+│   ├── MauiProgram.cs
+│   ├── PhoneWordTranslator.cs
+│   └── MicrosoftMauiCourse.csproj
+│
+├── android_dev_rev/             # Android Studio Projects (Java)
+│   ├── Calculator/              # Simple calculator
+│   ├── helloWorld/              # Hello World intro app
+│   ├── IntentsTuto/             # Intent & multi-activity demo
+│   ├── QuadraticEquationSolver/ # Quadratic equation solver
+│   └── SQLiteTuto/              # SQLite database tutorial
+│
+├── Movement_Detection/          # Advanced Android project
+│   ├── java/                    # Java source files
+│   ├── layout/                  # XML layouts
+│   ├── AndroidManifest.xml
+│   └── [Activities: HomeActivity, MainActivity, ProximityActivity, StepActivity]
+│
+└── README.md
 ```
 
 ---
 
 ## ⚙️ Getting Started
 
-### Running a MAUI Lab
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ElidyrsyYassineDev/mobile-dev-labs.git
-   ```
-2. Open the desired lab folder in **Visual Studio 2022+**
-3. Build and run on:
-   - Windows (WinUI)
-   - Android Emulator / Device
-   - iOS (Mac required)
+### Prerequisites
+- **For MAUI projects:** .NET 8 (or later), Visual Studio 2022
+- **For Android projects:** Java JDK, Android Studio, Android SDK
 
-### Running an Android Lab
-1. Clone the repository:
+### Running a MAUI Project
+
+1. Clone or navigate to the repository
+2. Open the project folder in **Visual Studio 2022**
+3. Ensure .NET workload for MAUI is installed:
    ```bash
-   git clone https://github.com/ElidyrsyYassineDev/mobile-dev-labs.git
+   dotnet workload restore
    ```
-2. Open the desired lab folder in **Android Studio**
-3. Let Gradle sync, then run on:
-   - Android Emulator
-   - Physical Android Device (via USB debugging)
+4. Build and run:
+   ```bash
+   dotnet build
+   dotnet run -f net8.0-windows
+   ```
+   Or select your target platform (Android, iOS, Windows)
+
+### Running an Android Project
+
+1. Navigate to the project folder (e.g., `android_dev_rev/Calculator/`)
+2. Open in **Android Studio**
+3. Wait for Gradle sync to complete
+4. Build & run on:
+   - Android Emulator (recommended for testing)
+   - Physical device (USB debugging enabled)
 
 ---
 
-## 🎯 Learning Objectives
+## 🎯 Skills Developed
 
-Through these labs, I developed skills in:
+Through these projects, the following skills were developed:
 
-- Understanding **MAUI** and **Android** app architecture
-- Designing UIs with **XAML** and **XML layouts**
-- Implementing **navigation** (AppShell / Intents)
-- Handling **user interaction** and events
-- Building **multi-screen** mobile applications
-- Working with **lists and dynamic data** (CollectionView / RecyclerView)
+**MAUI Track:**
+- Cross-platform app architecture design
+- XAML layout and UI component usage (StackLayout, Grid, CollectionView)
+- Navigation between pages (AppShell, routing)
+- Event handling and user interaction
+- Multi-page application patterns
+- Data binding and state management
+
+**Android Track:**
+- Android app lifecycle and activity management
+- XML layout design and resource management
+- Intent usage and multi-activity navigation
+- Database operations (SQLite)
+- Sensor integration (step counter, proximity)
+- Event handling and click listeners
+- User input validation and forms
 
 ---
 
-## 📌 Future Work
+## 📌 Project Highlights
 
-- 🧠 Add scoring and result tracking to the Quiz app
-- 💾 Integrate local databases (SQLite / Room)
-- 🌐 Connect to REST APIs for live data
-- 🎨 Improve UI/UX across both tracks
-- 🔐 Add user authentication flows
+### Quiz App (MAUI)
+- Dynamic category selection
+- Interactive multi-question quiz interface
+- Result page with score tracking
+- Multi-page navigation with AppShell
+
+### Movement Detection (Android)
+- Four distinct activities for different features
+- Integration with device sensors (accelerometer, proximity)
+- Step counting and activity detection
+- Home screen navigation
+
+---
+
+## 📚 Learning Path
+
+1. **Start with MAUI:** Begin with `phoneword/` project to learn MAUI basics
+2. **Progress to Complex UI:** Explore the `QuizApp` to understand multi-page navigation
+3. **Transition to Android:** Start with `android_dev_rev/helloWorld/` for fundamentals
+4. **Build Skills:** Progress through Calculator, Intents, and SQLite tutorials
+5. **Advanced:** Explore `Movement_Detection/` for sensor integration
+
+---
+
+## 🚀 Future Enhancements
+
+- Enhanced Quiz scoring and history
+- User authentication and profiles
+- Cloud backend integration (Firebase/REST APIs)
+- Improved UI/UX with animations
+- Data persistence and sync capabilities
+- Localization support
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome. Feel free to fork the repo and submit a pull request.
+Contributions are welcome! Feel free to submit issues or pull requests.
 
 ---
 
 ## 📄 License
 
-This repository is for educational purposes only.
+Educational use only.
 
 ---
 
@@ -140,3 +193,4 @@ This repository is for educational purposes only.
 
 **Yassine Idryssy**  
 Computer Science Engineering Student — ENSA Fes
+
